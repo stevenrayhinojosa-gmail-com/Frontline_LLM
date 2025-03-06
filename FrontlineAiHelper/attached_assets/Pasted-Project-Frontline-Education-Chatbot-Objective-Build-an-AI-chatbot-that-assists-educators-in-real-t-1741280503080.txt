@@ -1,0 +1,37 @@
+Project: Frontline Education Chatbot
+Objective:
+Build an AI chatbot that assists educators in real-time as they navigate the Frontline Education SaaS platform. The chatbot will be trained exclusively on publicly available Frontline Education resources and will reject unrelated queries with a clever response.
+
+Tech Stack:
+FastAPI – For serving the chatbot API
+ChromaDB – For storing and retrieving Frontline-related information
+LangChain – For querying the database efficiently
+OpenAI API (or Local Model) – For processing user queries
+BeautifulSoup/Scrapy – For scraping Frontline’s public documentation
+Replit & VS Code – For development and fine-tuning
+Step 1: Data Collection & Storage
+Scrape Frontline Education’s help center & documentation (or manually collect PDFs).
+Preprocess & chunk data into smaller, retrievable sections.
+Generate text embeddings using OpenAI’s text-embedding-ada-002 or a local embedding model.
+Store embeddings in ChromaDB for efficient retrieval.
+Step 2: Chatbot Backend
+Set up FastAPI on Replit for the chatbot’s API.
+Integrate LangChain to retrieve relevant information from ChromaDB.
+Filter non-Frontline queries and return a custom message like:
+“I’m here to assist with Frontline Education! If you need help with something else, I recommend checking other resources.”
+Deploy a test API endpoint for quick interaction.
+Step 3: Testing & Refinement
+Deploy on Replit and test responses.
+Export to VS Code for optimizations.
+Improve search relevance by fine-tuning embeddings and chunking methods.
+Step 4: Presentation & Pitch
+Create a GitHub repo with setup instructions.
+Deploy a simple web demo (if possible) for testing.
+Record a demo video showing how the chatbot assists users.
+Pitch on LinkedIn, tagging key Frontline decision-makers.
+Replit Instructions to Start:
+1️⃣ Set up FastAPI
+2️⃣ Install ChromaDB (pip install chromadb)
+3️⃣ Write a script to scrape or preprocess Frontline docs
+4️⃣ Embed and store data in ChromaDB
+5️⃣ Build a chatbot endpoint that queries ChromaDB
